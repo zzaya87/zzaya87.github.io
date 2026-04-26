@@ -8,56 +8,58 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
-  <!-- 캐시 갱신: 2026-04-27 — 연락: 20201006@gtec.ac.kr -->
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
-  <a class="join-strip" href="#contact">연락하기</a>
+  <span id="top" class="visually-hidden" aria-hidden="true">페이지 맨 위</span>
+  <a class="skip-link" href="#resume">이력서 본문으로 건너뛰기</a>
 
-  <header class="nav" id="top">
-    <a class="nav__brand" href="#top" aria-label="맨 위로">권효찬</a>
-    <nav class="nav__links" aria-label="주요 섹션">
+  <p class="scroll-hint" id="scroll-hint" role="status" aria-live="polite">스크롤하여 명함을 뒤집고 이력을 펼쳐 보세요</p>
+
+  <div class="card-stage" id="card-stage">
+    <div class="card-sticky" id="card-sticky">
+      <div class="table-surface" aria-hidden="true"></div>
+      <div class="scene" id="scene">
+        <div class="tilt-wrap" id="tilt-wrap">
+          <div class="card-inner" id="card-pivot" aria-label="2.5D 명함, 스크롤로 뒤집힙니다">
+            <div class="face face--front">
+              <div class="face-emboss" aria-hidden="true"></div>
+              <p class="face-label">Design &amp; Engineering</p>
+              <h1 class="face-name">권효찬</h1>
+              <p class="face-role">경기과학기술대 · 디자인공학</p>
+              <a class="face-mail" href="mailto:20201006@gtec.ac.kr">20201006@gtec.ac.kr</a>
+            </div>
+            <div class="face face--back">
+              <div class="back-pattern" aria-hidden="true"></div>
+              <p class="back-ribbon">RESUME</p>
+              <p class="back-lead">제품·기계 설계</p>
+              <p class="back-hint">↓ 스크롤 시 상세 이력</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-nav" id="site-nav" hidden>
+    <a class="site-nav__brand" href="#top">권효찬</a>
+    <nav class="site-nav__links" aria-label="주요 섹션">
       <a href="#intro">소개</a>
       <a href="#career">경력·학력</a>
       <a href="#skills">역량</a>
       <a href="#contact">연락</a>
     </nav>
-    <div class="nav__actions">
+    <div class="site-nav__actions">
       <a class="btn btn--outline" href="mailto:20201006@gtec.ac.kr">메일</a>
       <a class="btn btn--black" href="#contact">프로필</a>
     </div>
   </header>
 
-  <section class="hero" aria-label="인사">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Design · Engineering</p>
-      <h1 class="hero__title">
-        <span class="hero__title-serif">멋진 설계는,</span>
-        <span class="hero__title-sans">쓰임새를 만듭니다.</span>
-      </h1>
-      <p class="hero__lede body-large">
-        제품과 기계를 이어 주는 설계에 관심이 많습니다. 라이노, 오토캐드, 솔리드웍스로 아이디어를 형태로 옮기는 일을 좋아합니다.
-      </p>
-      <p class="hero__cup" aria-hidden="true"><span class="hero__cup-name">Hyochun</span></p>
-      <div class="hero__ctas">
-        <a class="btn btn--primary" href="#career">이력 보러가기</a>
-        <a class="btn btn--outline" href="#skills">관심 분야</a>
-      </div>
-    </div>
-    <div class="hero__visual" role="img" aria-label="프로필 비주얼 — 따뜻한 톤의 카드형 표현">
-      <div class="hero__card">
-        <span class="hero__initial" aria-hidden="true">H</span>
-        <p class="hero__card-caption">권효찬</p>
-        <p class="hero__card-meta">경기과학기술대 · 디자인공학</p>
-      </div>
-    </div>
-  </section>
-
-  <main class="main" id="intro">
-    <div class="main__inner">
-      <section class="section-block section-block--white">
+  <main class="resume" id="resume" tabindex="-1">
+    <div class="resume__inner">
+      <section class="section-block section-block--white" id="intro">
         <h2 class="h1">기본 정보</h2>
-        <div class="card">
+        <div class="content-card">
           <dl class="def-list">
             <div>
               <dt>이름</dt>
@@ -73,7 +75,7 @@
 
       <section class="section-block section-block--ceramic" id="career">
         <h2 class="h2">경력·학력</h2>
-        <div class="card">
+        <div class="content-card">
           <p class="body">경기과학기술대학교 디자인공학과 1학년 재학 중입니다. 설계 기초를 다지며 팀과 협업하는 수업에 참여하고 있습니다.</p>
         </div>
       </section>
@@ -81,11 +83,11 @@
       <section class="section-block section-block--white" id="skills">
         <h2 class="h1">관심 분야 &amp; 도구</h2>
         <div class="grid-2">
-          <div class="card">
+          <div class="content-card">
             <h3 class="h2" style="margin-top:0">관심 분야</h3>
             <p class="body">제품 디자인 및 기계 설계. 사용자 경험과 제조 가능성을 동시에 고려하는 방향을 탐구합니다.</p>
           </div>
-          <div class="card">
+          <div class="content-card">
             <h3 class="h2" style="margin-top:0">사용 프로그램</h3>
             <ul class="pills" aria-label="사용 툴">
               <li>라이노</li>
@@ -94,7 +96,7 @@
             </ul>
           </div>
         </div>
-        <div class="card card--rewards" aria-label="자격·성과">
+        <div class="content-card content-card--rewards" aria-label="자격·성과">
           <p class="rewards-label">스킬 배지</p>
           <p class="rewards-text"><strong>GTQ 포토샵 2급</strong> — 그래픽 작업의 기초를 다졌습니다.</p>
         </div>
@@ -131,15 +133,17 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <p class="site-footer__title">권효찬</p>
-      <p class="site-footer__muted">자기소개 · design system inspired by Starbucks (warm retail)</p>
+      <p class="site-footer__muted">자기소개 · 2.5D 명함 + warm retail tone</p>
       <p class="site-footer__gold" aria-label="감사 인사">Thanks a latte.</p>
     </div>
   </footer>
 
-  <a class="frap" href="#top" title="맨 위로" aria-label="맨 위로 이동">
+  <a class="frap" id="frap" href="#top" title="맨 위로" aria-label="맨 위로 이동" hidden>
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M12 4l-6 6h4v6h4v-6h4l-6-6z" fill="currentColor"/>
     </svg>
   </a>
+
+  <script src="card.js" defer></script>
 </body>
 </html>
